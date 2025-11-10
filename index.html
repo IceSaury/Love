@@ -110,29 +110,10 @@
             left:-100px;
             z-index: 1;
         }
-        
-        /* 音乐播放器样式 */
-        #musicControl {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 999;
-            cursor: pointer;
-            color: #f584b7;
-            font-size: 20px;
-        }
-        
-        #audioPlayer {
-            display: none;
-        }
     </style>
 </head>
 
 <body>
-    <div id="musicControl"></div>
-    <audio id="audioPlayer" loop>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
     <div id="child">
         <h3>💗刘玉红💗</h3>
         <h4>💗我永远为你着迷💗</h4>
@@ -141,22 +122,6 @@
     <canvas id="pinkboard"></canvas>
     <!-- <canvas id= "canvas"></canvas>  -->
     <script>
-        // 音乐播放控制
-        var musicControl = document.getElementById('musicControl');
-        var audioPlayer = document.getElementById('audioPlayer');
-        var isPlaying = false;
-
-        musicControl.onclick = function() {
-            if (isPlaying) {
-                audioPlayer.pause();
-                musicControl.textContent = '🎵';
-            } else {
-                audioPlayer.play();
-                musicControl.textContent = '🎵';
-            }
-            isPlaying = !isPlaying;
-        };
-
         /*
          * 设置
          */
